@@ -14,7 +14,6 @@ public class BootClass {
 
 	public static void main(String[] args) {
 		menuSelection();
-
 	}
     //Menu Selection
 	public static void menuSelection() {
@@ -36,7 +35,7 @@ public class BootClass {
 						iProductService.getAllSubCategory(), iProductService.getAllSupplier(),
 						iProductService.getAllDiscounts());
 
-				iProductService.addProduct(product);
+				userInteraction.showAddingStatus(iProductService.addProduct(product));
 
 				break;
 			case 2:
@@ -92,7 +91,7 @@ public class BootClass {
 
 				break;
 			case 4:
-				List<Product> listOfProducts = iProductService.getAllProductsList();
+				List<Product> listOfProducts = iProductService.getAllProducts();
 				userInteraction.viewAllProduts(listOfProducts);
 				break;
 			case 5:

@@ -425,6 +425,7 @@ public class UserInteraction {
 	}
     //Get The User Confirmation To Update The Product
 	public static boolean getUserConfirmationForUpdate() {
+		@SuppressWarnings("resource")
 		Scanner scn=new Scanner(System.in);
 		System.out.println("Do You Really want to update the product? Y/N");
 		String userconfirmation=scn.next();
@@ -433,4 +434,13 @@ public class UserInteraction {
 		else
 			return false;
 		}
+
+	public void showAddingStatus(boolean flag) {
+		
+		if(flag)
+			System.out.println("Product added.");
+		else
+			System.out.println("Product not added.");
+		
+	}
 }

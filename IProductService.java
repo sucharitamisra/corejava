@@ -2,7 +2,6 @@ package com.flp.pms.service;
 
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import com.flp.pms.domain.Category;
 import com.flp.pms.domain.Discount;
@@ -19,9 +18,9 @@ public interface IProductService {
 
 	public List<Discount> getAllDiscounts();
 
-	public void addProduct(Product product);
+	public boolean addProduct(Product product);
 
-	public Map<Integer, Product> getAllProducts();
+	public List<Product> getAllProducts();
 
 	public Product searchByProductName(String productName);
 
@@ -32,8 +31,6 @@ public interface IProductService {
 	public Product searchBySubCategoryName(String subCategoryName);
 
 	public Product searchByRating(float rating);
-
-	public List<Product> getAllProductsList();
 
 	public boolean removeProduct(Product productToRemove);
 
